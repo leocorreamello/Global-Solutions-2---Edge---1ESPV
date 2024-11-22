@@ -1,0 +1,324 @@
+[
+    {
+        "id": "7e26ff7d93f9f8b5",
+        "type": "tab",
+        "label": "Fluxo 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "c516c4b62249241c",
+        "type": "mqtt-broker",
+        "name": "Wokwi",
+        "broker": "test.mosquitto.org",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "3c42b2ac70e4f414",
+        "type": "ui_tab",
+        "name": "Green Flow",
+        "icon": "Green Flow",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "3bc4625135ec8933",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#04ff00",
+                "baseFont": "Times New Roman,Times,serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#04ff00",
+                    "edited": true
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#04ff00",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#4fff4d",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#04ff00",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "Times New Roman,Times,serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "532210fc4531548b",
+        "type": "ui_group",
+        "name": "Painel de Controle",
+        "tab": "3c42b2ac70e4f414",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "e86298b91da3bd7f",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "16d9fa07bf16c35d",
+        "type": "mqtt in",
+        "z": "7e26ff7d93f9f8b5",
+        "name": "",
+        "topic": "node-red/greenflow/energy",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "c516c4b62249241c",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 430,
+        "y": 260,
+        "wires": [
+            [
+                "f9dd9bae2ef37be4",
+                "ac91c6f786151cab"
+            ]
+        ]
+    },
+    {
+        "id": "f9dd9bae2ef37be4",
+        "type": "debug",
+        "z": "7e26ff7d93f9f8b5",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "2d5c859ec9e6bafe",
+        "type": "mqtt in",
+        "z": "7e26ff7d93f9f8b5",
+        "name": "",
+        "topic": "node-red/greenflow/currentAmps",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "c516c4b62249241c",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 450,
+        "y": 340,
+        "wires": [
+            [
+                "f9dd9bae2ef37be4",
+                "274523ae70f06a04",
+                "9881d5b0a9dd9059"
+            ]
+        ]
+    },
+    {
+        "id": "274523ae70f06a04",
+        "type": "ui_gauge",
+        "z": "7e26ff7d93f9f8b5",
+        "name": "",
+        "group": "532210fc4531548b",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "",
+        "label": "Amper",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 790,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "ac91c6f786151cab",
+        "type": "ui_text",
+        "z": "7e26ff7d93f9f8b5",
+        "group": "532210fc4531548b",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Nivel de consumo:",
+        "format": "{{msg.payload}}",
+        "layout": "row-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 830,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "9881d5b0a9dd9059",
+        "type": "ui_chart",
+        "z": "7e26ff7d93f9f8b5",
+        "name": "",
+        "group": "532210fc4531548b",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "Grafico de consumo",
+        "chartType": "bar",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "3",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "1",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#2bff00",
+            "#006eff",
+            "#ff7f0e",
+            "#ffee00",
+            "#ff00c8",
+            "#d62728",
+            "#94d1ff",
+            "#beff8a",
+            "#ffc675"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 840,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    }
+]
